@@ -1,8 +1,3 @@
-server:
-  port: 9002
-spring:
-  application:
-    name: web
 eureka:
   client:
     register-with-eureka: true # 作为客户端需要注册到Eureka
@@ -10,8 +5,5 @@ eureka:
     service-url: # 客户端注册地址
       defaultZone: http://localhost:8888/eureka
   instance:
-    # 优先使用该服务的IP地址注册到Eureka，在生产环境建议改为true
-    prefer-ip-address: true
-user:
-  ribbon:
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+  # 优先使用该服务的IP地址注册到Eureka，在生产环境建议改为true
+prefer-ip-address: true
